@@ -2,7 +2,7 @@
 
 # All Projects
 
-02: MNIST digit Classification with MLP
+## 02: MNIST digit Classification with MLP ##
 
 In this project, I developed a Multi-Layer Perceptron (MLP) to classify images of digits (1-4) from the MNIST dataset, achieving an accuracy of around 95%. The objective was to explore the impact of different activation functions (ReLU vs. Sigmoid) and variations in the number of hidden layers and nodes.
           
