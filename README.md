@@ -1,8 +1,8 @@
-## portfolionew ##
 
 # All Projects
 
 ## 02: MNIST digit Classification with MLP ##
+
 
 In this project, I developed a Multi-Layer Perceptron (MLP) to classify images of digits (1-4) from the MNIST dataset, achieving an accuracy of around 95%. The objective was to explore the impact of different activation functions (ReLU vs. Sigmoid) and variations in the number of hidden layers and nodes.
           
@@ -18,11 +18,11 @@ In this project, I developed a Multi-Layer Perceptron (MLP) to classify images o
           
 Through experimentation, I gained insights into balancing model complexity to avoid underfitting and   overfitting. I also observed the trade-offs between activation functions, understanding that ReLU tends to perform better in deeper networks but can lead to overfitting without regularization techniques.
 
-## 07: Neural Data Analysis in Matlab ##
+# 07: Neural Data Analysis in Matlab ##
 
 I have completed several projects in Matlab to perform data analysis. Some of these projects are represented here in my portfolio: 
 
-# 1. Brain-Computer Interface (BCI) Movement Data Analysis (MATLAB)
+## 1. Brain-Computer Interface (BCI) Movement Data Analysis (MATLAB)
 Project Focus:
 
 Neural data analysis using a linear regression model to decode hand movements in monkeys based on brain signals.
@@ -39,7 +39,7 @@ Engineering Relevance:
 
 This project involves signal processing, linear modeling, and decoder optimization for real-time applications in brain-computer interfaces. Methods for improving accuracy include adjusting hyperparameters and incorporating neural network-based decoders.
 
-# 2. Neural Visual Perception Data Analysis (MATLAB)
+## 2. Neural Visual Perception Data Analysis (MATLAB)
 Project Focus:
 
 Simulating visual processing in the retina and V1 cortex using neural data and computational models in MATLAB.
@@ -56,7 +56,7 @@ Engineering Relevance:
 
 This analysis integrates image processing, convolution operations, and Gabor filters to simulate biological vision systems. It emphasizes how artificial systems can replicate biological processes for applications like computer vision and neural prosthetics.
 
-# 3. Reaching Task Data Analysis (MATLAB)
+## 3. Reaching Task Data Analysis (MATLAB)
 Project Focus:
 
 Behavioral and neural analysis of monkeys performing a reaching task with data collected from the premotor cortex.
@@ -73,7 +73,7 @@ Engineering Relevance:
 
 This project combines biomechanics and neuroscience data analysis to understand motor responses. The statistical methods used, such as PSTH and ANOVA, are critical in quantifying neuron response times and performance in motor tasks.
 
-# 4. Spike Sorting for Neural Data (MATLAB)
+## 4. Spike Sorting for Neural Data (MATLAB)
 Project Focus:
 
 The uploaded .m file likely contains code for spike sorting, a method used to identify and classify action potentials from multi-neuron recordings in neural data.
