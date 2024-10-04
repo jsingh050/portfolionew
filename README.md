@@ -3,6 +3,7 @@
 
 ## 01: Motion-Edge Detector ##
 
+
 ## 02: MNIST digit Classification with MLP ##
 
 
