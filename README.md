@@ -105,3 +105,11 @@ In this project, I created a neuromorphic event-based audio sensor that models a
 The project mimics the human cochlea, which converts sound into electrical signals by detecting frequency components.
 
 Building a neuromorphic 1D cochlea is important because it simulates how the human ear processes sound in real-time, enabling efficient, low-power signal processing similar to biological systems. This approach is especially valuable for developing auditory prosthetics (e.g., cochlear implants) and low-power audio processing systems for speech recognition and other applications, as it captures key auditory features while minimizing computational and power demands.
+
+
+## 04: Keyword Spotting Using Spiking Neural Network ##
+Keyword Spotting, or using A.I to detect spoken words with increasing accuracy has a multitude of uses in today's day and age - beginning with Alexa, to translation, to accessibility. Spilking Neural Networks may offer an alternative approach with lower latency and higher computational power. 
+
+In this project, using Loihi's neuromorphic chip platform Lava, I created a Spiking Neural Network to perform keyword spotting for spoken digits (0-9)  from a validated dataset. Additionally, Pytorch and keras were used to implement a LIF neuron model to perform keyword spotting.
+
+​I have not made my code or paper publicly available for privacy reasons. Please reach out to view this code, paper, or presentation and I would be happy to share more information. 
