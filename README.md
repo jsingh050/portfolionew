@@ -122,3 +122,49 @@ Then, I went on to model associative learning in neural networks. In neuroscienc
 This project showcases a key principle in neural plasticity: the ability of synaptic connections to change based on the activity patterns of neurons. In real biological systems, this allows for learning and memory formation. Here, the successful training of the neural network demonstrates how synaptic plasticity can be computationally modeled, providing a framework for further exploration in machine learning and neuromorphic computing.
 
 Both the Izhikevich neuron model and the LIF neural network with STDP contribute to the broader field of neuromorphic engineering, where hardware and software systems are designed to emulate the functionality of the brain. By simulating neuron firing patterns and synaptic plasticity, these projects lay the foundation for building adaptive neural networks that can learn from stimuli in real-time.
+
+
+
+## 09b: Neuron Model ##
+Neuromorphic Learning: Izhikevich Models, SNNs, and Bootstrap Training
+The recent assignments provide a comprehensive exploration of neuromorphic computing systems, with a focus on Spike-Timing-Dependent Plasticity (STDP), Leaky-Integrate-and-Fire (LIF) neuron models, and Spiking Neural Networks (SNNs) trained using both conventional methods and advanced bootstrap training techniques. These tasks demonstrate key technical skills such as differential equation solving, neural simulation, and training SNNs with biologically inspired learning rules.
+
+1. Spike-Timing-Dependent Plasticity (STDP) in LIF Neurons
+The first assignment centered around the implementation of STDP in a neural network of Leaky-Integrate-and-Fire (LIF) neurons. STDP is a form of Hebbian learning where the synaptic strength is adjusted based on the timing of pre- and post-synaptic spikes. The technical work involved the following steps:
+
+Neuron Dynamics Simulation: Simulating the behavior of pre- and post-synaptic neurons using LIF models.
+STDP Rule Implementation: Applying the STDP rule to update synaptic weights based on the timing difference between spikes. This biologically inspired rule is crucial for tasks involving associative learning and memory formation in artificial neural networks.
+Visualization of Spike Trains and Weight Changes: Monitoring the evolution of spikes and synaptic weights in response to STDP, which allowed for the observation of learning behavior.
+The Lava framework was employed for creating LIF neurons and integrating STDP, showcasing the technical expertise in working with neuromorphic platforms.
+
+2. MNIST Digit Classification Using LIF Networks
+The second part of the assignment extended the use of LIF neurons to a classic problem in neural networks: MNIST digit classification. This task demonstrated how to build a feed-forward neural network using LIF neurons, where the neurons' spiking behavior approximates that of traditional artificial neurons. The process involved:
+
+Converting MNIST Images to Spike Trains: Input images from the MNIST dataset were converted into spikes proportional to pixel intensity, a technique commonly used in neuromorphic vision systems.
+Feed-Forward Network with Dense Layers: A multi-layer LIF network with fully connected layers was used to perform classification. Pre-trained weights were employed to initialize the network, which was then simulated in the Lava framework.
+Accuracy Measurement: The model’s accuracy was evaluated by comparing its predictions to the ground truth, achieving promising results for a spiking network without convolutional layers.
+This task highlights the potential of spiking neural networks (SNNs) in standard classification tasks while illustrating how biologically plausible models can be adapted to tasks traditionally solved by artificial neural networks (ANNs).
+
+3. Bootstrap SNN Training for MNIST Classification
+The final assignment introduced an advanced technique known as bootstrap training for SNNs. The underlying principle of this method is the approximation of a spiking neuron’s firing rate using the ReLU activation function, enabling the seamless conversion between ANN and SNN modes. The following steps were key to this work:
+
+SNN-ANN Conversion: By collecting data from an SNN operating in sampling mode, the activations were used to approximate the corresponding ANN activations, improving training efficiency.
+Hybrid ANN-SNN Training: Alternating between ANN and SNN modes accelerated the training process, resulting in faster convergence and higher accuracy for MNIST classification.
+Visualization and Export: The trained SNN was visualized through spike-based animations, and the final model was exported for further use in neuromorphic hardware.
+This bootstrap method represents an important step in neuromorphic deep learning, as it bridges the gap between traditional ANNs and energy-efficient SNNs, which are well-suited for deployment on neuromorphic hardware platforms like Intel’s Loihi.
+
+Importance and Broader Applications
+These assignments are significant for several reasons:
+
+Bio-Inspired Learning: The use of STDP and LIF neuron models in the first two tasks is a direct application of biologically inspired principles to artificial intelligence. STDP, for example, is critical for temporal learning and spike-based computation, both of which are essential for developing intelligent systems that mimic the brain's efficiency.
+
+Spiking Neural Networks (SNNs): SNNs are gaining traction in the neuromorphic community due to their low power consumption and real-time processing capabilities. By approximating neuronal spiking behavior, SNNs provide a more biologically realistic model of computation compared to ANNs, making them suitable for edge devices and applications requiring energy efficiency.
+
+Advanced Training Techniques: The introduction of bootstrap training for SNNs demonstrates how traditional deep learning methods can be adapted to neuromorphic systems, improving their scalability and performance on tasks such as image classification. This hybrid approach is a promising step towards making neuromorphic computing more practical for mainstream applications.
+
+Cross-Disciplinary Applications: The techniques developed here can be applied in various domains, including robotics, autonomous systems, and prosthetics, where real-time processing and energy efficiency are paramount. Furthermore, neuromorphic systems are essential for next-generation AI, offering solutions that combine the power of deep learning with the brain's natural computational efficiency.
+
+Conclusion
+The assignments successfully demonstrate the technical capability to work with cutting-edge neuromorphic platforms, implementing advanced models such as STDP and SNNs while leveraging hybrid training techniques like bootstrap learning. The broader significance of this work lies in its potential to revolutionize fields that require low-latency and low-power computation, paving the way for practical neuromorphic applications in real-world AI systems.
+
+
