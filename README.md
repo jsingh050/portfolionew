@@ -16,15 +16,10 @@ In this project, I developed a Multi-Layer Perceptron (MLP) to classify images o
           16 Nodes	ReLU	0.6434	          78.47%
           64 Nodes	ReLU	0.2790	          94.88%
           64 Nodes	Sigmoid	0.2790	          91.51%
-          64 Nodes * Sigmoid	0.2568	          92.37%
+          64 Nodes * Sigmoid	0.2568	        92.37%
           * 2-hidden-layers
           
 Through experimentation, I gained insights into balancing model complexity to avoid underfitting and   overfitting. I also observed the trade-offs between activation functions, understanding that ReLU tends to perform better in deeper networks but can lead to overfitting without regularization techniques.
-
-# 03: 1-D cochlear 
-Neuromorphic systems have become a focal point of research in bio-inspired sensor technologies, taking inspiration from the human brain's efficiency in processing sensory inputs. I worked on a simple neuromorphic audition system using microphones. Some relevant technical skills I used include signal processing, machine learning, and neuromorphic event-based computation. The benefits of neuromorphic systems are that they offer real-time, low-latency detection of events instead of continous recording. 
-
-This converts a regular microphone into a neuromorphic event-based sensor, models a 1D cochlea, processes audio signals by breaking them into time slices, and applies Fast Fourier Transforms (FFT) to capture the frequency spectrum. The use of bandpass filters (BPF) helps isolate specific frequency bands, and energy calculations in these bands are used to detect significant auditory events, mimicking how human auditory neurons respond to specific frequencies. Some skills I learned in this project include signal processing, the use of FFT and bandpass filters to decompose audio signals into their frequency components, and the creation of an event detection system that just generates events (spikes) based on thresholding frequency band energy levels. Afterward, an event matrix  represents spoken digits (e.g., "zero", "one", "two"). 
 
 # 07: Neural Data Analysis in Matlab ##
 
@@ -103,10 +98,27 @@ Neuroprosthetics Applications: The projects focus on translating neural activity
 
 Computational Neuroscience Tools: MATLAB is heavily used for modeling neural data and analyzing physiological responses, combining methods from both biomedical engineering and computer vision.
 
+# 03: 1-dimensional cochlear model
 
-## 04: Keyword Spotting Using Spiking Neural Network ## (Loihi/Python)
+In this project, I created a neuromorphic event-based audio sensor that models a 1D cochlea using a microphone. When audio is spoken into the microphone, the sensor processes the audio signals (in this case, spoken digits) by applying Fast Fourier Transform (FFT), breaking down the audio into frequency bands, and generating spike-based events based on power thresholds in each band.
+
+The project mimics the human cochlea, which converts sound into electrical signals by detecting frequency components.
+
+Building a neuromorphic 1D cochlea is important because it simulates how the human ear processes sound in real-time, enabling efficient, low-power signal processing similar to biological systems. This approach is especially valuable for developing auditory prosthetics (e.g., cochlear implants) and low-power audio processing systems for speech recognition and other applications, as it captures key auditory features while minimizing computational and power demands.
+
+
+## 04: Keyword Spotting Using Spiking Neural Network ##
 Keyword Spotting, or using A.I to detect spoken words with increasing accuracy has a multitude of uses in today's day and age - beginning with Alexa, to translation, to accessibility. Spilking Neural Networks may offer an alternative approach with lower latency and higher computational power. 
 
 In this project, using Loihi's neuromorphic chip platform Lava, I created a Spiking Neural Network to perform keyword spotting for spoken digits (0-9)  from a validated dataset. Additionally, Pytorch and keras were used to implement a LIF neuron model to perform keyword spotting.
 
 ​I have not made my code or paper publicly available for privacy reasons. Please reach out to view this code, paper, or presentation and I would be happy to share more information. 
+
+## 09: Neuron Models ##
+
+I explored implementation of a bio-inspired neuron model in Python. This model draws inspiration from biological neurons, which are complex and incredibly energy efficient and have low-latency. First, I implemented the famous Izhikevick neuron model. This model simplifies the the Hodgkin-Huxley model to offer computational efficiency. The Izhikevich model uses two differential equations to simulate membrane potential (voltage) and recovery (adaptation) variables in neurons. By adjusting the parameters, I could simulate different types of neuronal behaviors such as regular spiking (RS), fast spiking (FS), intrinsically bursting (IB), and chattering (CH). I used python to perform differential equation solving, tune the parameters, and finally to plot the data (voltage-time and adaptation-time graphs) for each neuron type. Spike frequency was analyzed as a function of input current for the regular spiking neuron. By plotting spike frequency versus the input current, the minimum spike frequency was determined, providing insight into the responsiveness of neurons to external stimuli. This exercise is critical for designing neuromorphic circuits that respond accurately to varying inputs, a key feature in sensory systems like vision or audition.
+
+Then, I went on to model associative learning in neural networks. In neuroscience, it is known that neurons that "fire together, wire together". Since neurons can form strong connections to one another, it allows learning to take place. Through an LIF neuron model with Spike-Timing Dependent Plasticity (STDP), it can be seen how synaptic weights can evolve in response to repeated neural firing, leading to the learning of associations between stimuli. The neural network consists of two input neurons (N0, N1) and one output neuron (N2). Initially, N2 fires only in response to N0 due to a strong synaptic weight between N0 and N2. By applying simultaneous stimulation to both N0 and N1, the synaptic weight between N1 and N2 is strengthened through the STDP rule, demonstrating associative learning when, after training, N2 begins to fire in response to N1 alone. Implementing the STDP rule to simulate how synaptic strengths evolve based on the timing of pre- and post-synaptic spikes.
+This project showcases a key principle in neural plasticity: the ability of synaptic connections to change based on the activity patterns of neurons. In real biological systems, this allows for learning and memory formation. Here, the successful training of the neural network demonstrates how synaptic plasticity can be computationally modeled, providing a framework for further exploration in machine learning and neuromorphic computing.
+
+Both the Izhikevich neuron model and the LIF neural network with STDP contribute to the broader field of neuromorphic engineering, where hardware and software systems are designed to emulate the functionality of the brain. By simulating neuron firing patterns and synaptic plasticity, these projects lay the foundation for building adaptive neural networks that can learn from stimuli in real-time.
