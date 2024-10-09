@@ -16,10 +16,15 @@ In this project, I developed a Multi-Layer Perceptron (MLP) to classify images o
           16 Nodes	ReLU	0.6434	          78.47%
           64 Nodes	ReLU	0.2790	          94.88%
           64 Nodes	Sigmoid	0.2790	          91.51%
-          64 Nodes * Sigmoid	0.2568	        92.37%
+          64 Nodes * Sigmoid	0.2568	          92.37%
           * 2-hidden-layers
           
 Through experimentation, I gained insights into balancing model complexity to avoid underfitting and   overfitting. I also observed the trade-offs between activation functions, understanding that ReLU tends to perform better in deeper networks but can lead to overfitting without regularization techniques.
+
+# 03: 1-D cochlear 
+Neuromorphic systems have become a focal point of research in bio-inspired sensor technologies, taking inspiration from the human brain's efficiency in processing sensory inputs. I worked on a simple neuromorphic audition system using microphones. Some relevant technical skills I used include signal processing, machine learning, and neuromorphic event-based computation. The benefits of neuromorphic systems are that they offer real-time, low-latency detection of events instead of continous recording. 
+
+This converts a regular microphone into a neuromorphic event-based sensor, models a 1D cochlea, processes audio signals by breaking them into time slices, and applies Fast Fourier Transforms (FFT) to capture the frequency spectrum. The use of bandpass filters (BPF) helps isolate specific frequency bands, and energy calculations in these bands are used to detect significant auditory events, mimicking how human auditory neurons respond to specific frequencies. Some skills I learned in this project include signal processing, the use of FFT and bandpass filters to decompose audio signals into their frequency components, and the creation of an event detection system that just generates events (spikes) based on thresholding frequency band energy levels. Afterward, an event matrix  represents spoken digits (e.g., "zero", "one", "two"). 
 
 # 07: Neural Data Analysis in Matlab ##
 
